@@ -1,0 +1,10 @@
+{
+  "name": "bhoomi-backend",
+  "version": "1.0.0",
+  "description": "Bhoomi land-rate estimator API (Express + SQLite)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.13" },
+  "license": "ISC",
+  "dependencies": { "cors": "^2.8.6", "express": "^5.2.1" }
+}
