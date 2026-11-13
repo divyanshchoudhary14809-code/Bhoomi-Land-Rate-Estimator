@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhoomi · India Land Rate Estimator</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#efe6d4;--card:#f9f3e6;--ink:#2f2a1f;--mute:#7b6f58;--line:#dccfb2;--acc:#a8501f;--acc2:#eddcbd;--olive:#5b6b3a;--warn:#b03a1a;--hero1:#c9803f;--hero2:#8a5a2b}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 50px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1812;--card:#26221a;--ink:#f0e6d0;--mute:#b3a68a;--line:#3d3729;--acc:#e58f55;--acc2:#342d20;--olive:#a3b56f;--warn:#f0a070;--hero1:#5c3a1c;--hero2:#33200f}}
+:root[data-theme="dark"]{--bg:#1b1812;--card:#26221a;--ink:#f0e6d0;--mute:#b3a68a;--line:#3d3729;--acc:#e58f55;--acc2:#342d20;--olive:#a3b56f;--warn:#f0a070;--hero1:#5c3a1c;--hero2:#33200f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--hero1),var(--hero2));color:#fbf3e2;padding:26px 16px 64px}
+.hero svg{position:absolute;left:0;bottom:-1px;width:100%;height:56px}
+.hin,main,nav .ni{max-width:820px;margin:0 auto}.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;opacity:.85;font-family:system-ui,sans-serif}
+h1{font-size:1.8rem;margin:.1em 0 .15em;line-height:1.15}.hero p{margin:0;opacity:.92;max-width:36em}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+nav .ni{display:flex;gap:4px;overflow-x:auto;padding:6px 10px}nav a{white-space:nowrap;padding:8px 12px;border-radius:20px;color:var(--ink);text-decoration:none;font:14px system-ui,sans-serif}
+nav a.on{background:var(--acc);color:#fff}
+main{padding:16px 16px 48px}h2{font-size:1.15rem;margin:0 0 .5em}h3{font-size:1rem;margin:1em 0 .4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:0 6px 18px rgba(80,50,20,.07)}
+input[type=text],input[type=number]{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:16px system-ui,sans-serif}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
+button,select{font:15px system-ui,sans-serif}
+button,.btn{padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+button.p{background:var(--acc);color:#fff;border-color:var(--acc);font-weight:600}
+.locbtn{width:100%;padding:15px;font-size:1.05rem;background:var(--olive);color:#fff;border-color:var(--olive);font-weight:600;border-radius:14px}
+.or{text-align:center;color:var(--mute);font-size:.85rem;margin:12px 0 0;font-family:system-ui,sans-serif}
+button.chip{font-size:.85rem;padding:6px 11px;background:var(--acc2);border-radius:20px}
+button.rm{font-size:.8rem;padding:4px 9px;background:transparent;border-color:var(--warn);color:var(--warn)}
+select{padding:10px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.big{font-size:2.2rem;font-weight:700;color:var(--acc);line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:12px}
+.k{background:var(--acc2);border-radius:12px;padding:10px}.k b{display:block;font-size:1.02rem}.k span,.note{font-size:.82rem;color:var(--mute);font-family:system-ui,sans-serif}
+.err{color:var(--warn);font-weight:600}
+.bar{display:flex;align-items:center;gap:8px;font-size:.8rem;margin:3px 0;font-family:system-ui,sans-serif}.bar i{display:block;height:10px;background:linear-gradient(90deg,var(--olive),var(--acc));border-radius:5px}.bar em{width:150px;font-style:normal;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font:14px system-ui,sans-serif}th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--mute);font-weight:600}
+ol,ul{padding-left:1.2em;margin:.3em 0}li{margin:.35em 0}details{border-top:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
+.two{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}@media(max-width:560px){.two{grid-template-columns:1fr}}
+code{background:var(--acc2);padding:1px 5px;border-radius:5px;font-size:.9em}
+.loc{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px;background:var(--bg)}
+.loc .row{margin-top:8px}
+.tag{display:inline-block;font-size:.72rem;background:var(--acc2);color:var(--mute);border-radius:10px;padding:2px 8px;font-family:system-ui,sans-serif}
+.best{outline:2px solid var(--olive)}
+</style></head><body>
+<header class="hero"><div class="hin"><div class="eyebrow">Bhoomi · भूमि</div><h1>India Land Rate Estimator</h1><p>Estimated plot / circle rates in ₹ for land anywhere in India, from real cited rates — using your location, Google Maps or Google Earth.</p></div>
+<svg viewBox="0 0 800 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34 C120 6 220 50 340 28 S560 0 680 24 S780 20 800 17 V56 H0Z" fill="var(--olive)" opacity=".55"/><path d="M0 44 C140 20 260 54 400 38 S650 18 800 36 V56 H0Z" fill="var(--bg)"/></svg></header>
+<nav><div class="ni" id="nav"></div></nav>
+<main id="view"></main>
+<script src="app.js"></script></body></html>
